@@ -1,7 +1,5 @@
 import Home from '../assets/Home.svg'
-import Recipients from '../assets/Recipients.svg'
 import Process from '../assets/Processdocuments.svg'
-import Advice from '../assets/Advice.svg'
 import Dollar from '../assets/Dollar.svg'
 import Money from '../assets/Money.svg'
 import Send from '../assets/Send.svg'
@@ -32,13 +30,7 @@ export default function Sidemenu() {
                       </div>  
                     </Link>
 
-                      <Link  to="/getadvice" >
-                      <div>
-                      <Button className='gap-4 mb-5  w-56 hover:bg-white '  variant={"outline"} size={"lg"}>
-                        <img src={Advice} alt="" /> 
-                        <p className='text-blue-600'>Get Advice</p></Button>
-                      </div> 
-                      </Link> 
+                      
                        <Link   to="/transaction">
                        <div>
                         <Button className='gap-4 mb-5  w-56  hover:bg-white'  variant={"outline"} size={"lg"}>
@@ -47,11 +39,7 @@ export default function Sidemenu() {
                         </Button>
                         </div>  
                        </Link>
-                      <div>
-                      <Button className='gap-4 mb-5  w-56  hover:bg-white'  variant={"outline"} size={"lg"}>
-                        <img src={Recipients} alt="" /> 
-                        <p className='text-blue-600'>Recipients</p></Button>
-                      </div>  
+                      
 
                       <div>
                       <Button className='gap-4 mb-5  w-56  hover:bg-white'  variant={"outline"} size={"lg"}>

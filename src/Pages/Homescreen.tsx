@@ -23,10 +23,14 @@ import Pending from '/src/assets/Pending.svg'
 import Lock from '/src/assets/Lock.svg'
 import Avatar1 from '/src/assets/Avatar1.png'
 import { Link } from "react-router-dom"
+import Warn from '../assets/Warn.svg'
+
+
+
 
 export default function Homescreen() {
   return (
-    <>
+    
     <div className="py-32 px-5">
           <div className='lg:flex gap-8 lg:flex-wrap h-40 md:flex'>
             <Card className="mb-5 w-full lg:w-48">
@@ -34,8 +38,9 @@ export default function Homescreen() {
                 <CardDescription className="text-slate-700 font-medium">Current Balance</CardDescription>
                 <CardTitle className="flex text-blue-700"><img src={Currency} alt="" />5,000,000</CardTitle>
               </CardHeader>
-              <CardContent>
+              <CardContent className="flex gap-2">
                 <p className="text-red-400">Funds locked up</p>
+                <img src={Warn} alt="" />
               </CardContent>
               
             </Card>
@@ -48,7 +53,7 @@ export default function Homescreen() {
               </CardHeader>
               <CardContent>
                 <p className=" flex gap-2">
-                  <span>Status</span>
+                  <span>Status:</span>
                   <span>Sent</span>
                   <span><img src={Check} alt="" /></span>
                 </p>
@@ -108,6 +113,7 @@ export default function Homescreen() {
           </div>
           
           </div>
+
           <div>
             <h3 className="text-xl font-bold">
               My assets under trust fund contract
@@ -210,6 +216,6 @@ export default function Homescreen() {
           
           
     
-    </>
+    
   )
 }

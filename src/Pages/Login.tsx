@@ -10,6 +10,7 @@ export default function Login() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const navigate = useNavigate();
+  const [errorState, setErrorState] = useState(null);
 
   const loginAccount = async (e) => {
     e.preventDefault();
@@ -21,23 +22,28 @@ const userCredential = await signInWithEmailAndPassword(auth, email, password);
     
       navigate('/homescreen');
     } catch (error) {
-    
-      console.error('Authentication Error:', error);
+      if (error.code === 'auth/wrong-password') {
+        setErrorState('Incorrect password. Please try again.');
+      } else {
+        console.error('Authentication Error:', error);
+        setErrorState('Log in failed. Please check your credentials and try again.');
+      }
     }
 
-    alert("You have logged into your account");
+    
   };
-
-
-
-
 
   return (
     <div className="flex justify-center py-40">
               <form action="" className='w-72 lg:w-96 lg:py-8 py-5 lg:px-7 px-5 border-2 border-slate-200 rounded-md '>
-                  <div className="font-bold text-2xl mb-5">
+                <div className="font-bold text-2xl mb-5">
                     Login
                   </div>
+                  {errorState && (
+              <div className="text-red-600 text-end rounded-md px-3 border py-2 text-xs font-semibold bg-red-100 mb-5 ">
+                {errorState}
+              </div>
+            )}
               <div className="sm:col-span-4">
               <label htmlFor="email" className="block text-sm font-medium leading-6 text-gray-900">
                 Email address
@@ -58,6 +64,9 @@ const userCredential = await signInWithEmailAndPassword(auth, email, password);
                 />
               </div>
             </div>
+
+                
+
               <div className="sm:col-span-4">
               <label htmlFor="email" className="block text-sm font-medium leading-6 text-gray-900">
                     Password 
@@ -84,6 +93,8 @@ const userCredential = await signInWithEmailAndPassword(auth, email, password);
                 Go to Dashboard
               </Button>
             </div>
+            
+
               </form>
 
     </div>

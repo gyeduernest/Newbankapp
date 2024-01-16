@@ -8,6 +8,7 @@ import Trustfund from "./Pages/Trustfund"
 import Getadvice from "./Pages/Getadvice"
 import Account from "./Pages/Account"
 import Signup from "./Pages/Sgnup"
+import Downmenu from "./Pages/Downmenu"
 
 function App() {
   
@@ -22,8 +23,12 @@ function App() {
                       <div className="">
                         <Sidemenu/>
                       </div>
+                      <div className="lg:hidden">
+                        <Downmenu/>
+                      </div>
                       <div>
                         <Routes>
+                          <Route path="/" element={<Login/>}/>
                           <Route path="/login" element={<Login/>}/>
                           <Route path="/signup" element={<Signup/>}/>
                           <Route path="/homescreen" element={<Homescreen/>}/>
