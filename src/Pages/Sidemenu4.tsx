@@ -1,11 +1,11 @@
-import Homelight from '../assets/Homelight.svg'
+import Home from '../assets/Home.svg'
 import Process from '../assets/Processdocuments.svg'
 import Dollar from '../assets/Dollar.svg'
 import Money from '../assets/Money.svg'
 import Send from '../assets/Send.svg'
 import { Button } from '@/components/ui/button'
 import { Link } from 'react-router-dom'
-import Person from '../assets/Person.svg'
+import Personlight from '../assets/Personlight.svg'
 
 
 
@@ -17,9 +17,9 @@ export default function Sidemenu() {
                 <ul>
                     <Link to="/homescreen">
                       <div>
-                      <Button className='gap-4 mb-5  w-56  text-white bg-blue-700 '   size={"lg"}>
-                        <img src={Homelight} alt="" /> 
-                        <p className='text-white'>Home</p></Button>
+                      <Button className='gap-4 mb-5  w-56 hover:bg-white '  variant={"outline"} size={"lg"}>
+                        <img src={Home} alt="" /> 
+                        <p className='text-blue-600'>Home</p></Button>
                       </div>
                     </Link>
 
@@ -39,13 +39,11 @@ export default function Sidemenu() {
                         </Button>
                         </div>  
                        </Link>
-
-                      <Link to="/account" >
+                       <Link to="/account" >
                     <div>
-                      
-                      <Button className='gap-4 mb-5  w-56  hover:bg-white'  variant={"outline"} size={"lg"}>
-                        <img src={Person} alt="" /> 
-                        <p className='text-blue-600'>Account</p></Button>
+                      <Button className='gap-4 mb-5  w-56  bg-blue-700'   size={"lg"}>
+                        <img src={Personlight} alt="" /> 
+                        <p className='text-white'>Account</p></Button>
                       </div>  
                       </Link>
                       <Link    to="/pending" >
@@ -55,8 +53,7 @@ export default function Sidemenu() {
                         <img src={Money} alt="" /> 
                         <p className='text-blue-600'>Pending Bills</p></Button>
                       </div>  
-                      </Link>
-
+                      </Link>  
                       
                 </ul>
               </nav>

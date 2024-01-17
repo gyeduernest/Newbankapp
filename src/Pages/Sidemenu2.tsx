@@ -1,12 +1,11 @@
-import Homelight from '../assets/Homelight.svg'
-import Process from '../assets/Processdocuments.svg'
+import Home from '../assets/Home.svg'
+import Trustlight from '../assets/Trustlight.svg'
 import Dollar from '../assets/Dollar.svg'
 import Money from '../assets/Money.svg'
 import Send from '../assets/Send.svg'
 import { Button } from '@/components/ui/button'
 import { Link } from 'react-router-dom'
 import Person from '../assets/Person.svg'
-
 
 
 
@@ -17,18 +16,18 @@ export default function Sidemenu() {
                 <ul>
                     <Link to="/homescreen">
                       <div>
-                      <Button className='gap-4 mb-5  w-56  text-white bg-blue-700 '   size={"lg"}>
-                        <img src={Homelight} alt="" /> 
-                        <p className='text-white'>Home</p></Button>
+                      <Button className='gap-4 mb-5  w-56 hover:bg-white '  variant={"outline"} size={"lg"}>
+                        <img src={Home} alt="" /> 
+                        <p className='text-blue-600'>Home</p></Button>
                       </div>
                     </Link>
 
                     <Link to="/trustfund">
                     
                       <div>
-                      <Button className='hover:bg-white gap-4 mb-5  w-56 '  variant={"outline"} size={"lg"}>
-                        <img src={Process} alt="" /> 
-                        <p className='text-blue-600'>Trust Fund</p></Button>
+                      <Button className='bg-blue-700 gap-4 mb-5  w-56 ' size={"lg"}>
+                        <img src={Trustlight} alt="" /> 
+                        <p className='text-white'>Trust Fund</p></Button>
                       </div>  
                     </Link>
                        <Link   to="/transaction">
@@ -39,8 +38,7 @@ export default function Sidemenu() {
                         </Button>
                         </div>  
                        </Link>
-
-                      <Link to="/account" >
+                       <Link to="/account" >
                     <div>
                       
                       <Button className='gap-4 mb-5  w-56  hover:bg-white'  variant={"outline"} size={"lg"}>
@@ -56,7 +54,6 @@ export default function Sidemenu() {
                         <p className='text-blue-600'>Pending Bills</p></Button>
                       </div>  
                       </Link>
-
                       
                 </ul>
               </nav>

@@ -24,15 +24,30 @@ import Lock from '/src/assets/Lock.svg'
 import Avatar1 from '/src/assets/Avatar1.png'
 import { Link } from "react-router-dom"
 import Warn from '../assets/Warn.svg'
+import Sidemenu from "./Sidemenu"
+import Downmenu from "./Downmenu"
+import Topnav from "./Topnav"
+
 
 
 
 
 export default function Homescreen() {
   return (
-    
-    <div className="py-32 px-5">
-          <div className='lg:flex gap-8 lg:flex-wrap h-40 md:flex'>
+    <>
+  <div className="w-full lg:px-40 bg-slate-50 fixed top-0 text-sm  md:w-full">
+   <Topnav/>
+  </div>
+  <Downmenu/>
+
+  <div className="lg:flex justify-center  py-40 ">
+
+  <div className="lg:fixed lg:left-20 ">
+    <Sidemenu/>
+  </div>
+    <div className="lg:flex  ">
+       <div className="px-5">
+          <div className='lg:flex gap-8 lg:flex-wrap h-40 md:flex justify-center'>
             <Card className="mb-5 w-full lg:w-48">
               <CardHeader>
                 <CardDescription className="text-slate-700 font-medium">Current Balance</CardDescription>
@@ -212,7 +227,12 @@ export default function Homescreen() {
               
             </div>
           </div>
+          </div>
       </div> 
+  </div>
+
+    
+      </>
           
           
     

@@ -11,11 +11,24 @@ import {
 } from "@/components/ui/alert-dialog"
 import { Button } from "@/components/ui/button"
 import Lock from '/src/assets/Lock.svg'
+import Topnav from "./Topnav"
+import Downmenu from "./Downmenu"
+import Sidemenu2 from "./Sidemenu2"
 
 export default function Trustfund() {
   return (
     <>
-    <div className="lg:py-28 md:py-24 py-24 px-5">
+    <div className="w-full lg:px-40 bg-slate-50 fixed top-0 text-sm  md:w-full">
+<Topnav/>
+  </div>
+  <Downmenu/>
+
+  <div className="lg:flex justify-center">
+  <div className="lg:py-40 py-16 lg:fixed left-20">
+    <Sidemenu2/>
+  </div>
+
+    <div className="lg:py-28 md:py-24  px-5 mb-20">
           
           <div className=" 
           bg-white lg:p-5 md:p-5 border rounded-md mb-10 md:mb-10 md:mt-5  lg:mt-5 lg:mb-10 " >
@@ -116,6 +129,9 @@ export default function Trustfund() {
           </div>
       </div> 
           
+  </div>
+
+
           
     
     </>

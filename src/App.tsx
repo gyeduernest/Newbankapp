@@ -1,32 +1,22 @@
-import { BrowserRouter, Router, Routes, Route } from "react-router-dom"
-import Topnav from "./Pages/Topnav"
-import Sidemenu from "./Pages/Sidemenu"
+import { BrowserRouter, Routes, Route } from "react-router-dom"
 import Homescreen from "./Pages/Homescreen"
 import Login from "./Pages/Login"
 import Transaction from "./Pages/Transaction"
 import Trustfund from "./Pages/Trustfund"
-import Getadvice from "./Pages/Getadvice"
-import Account from "./Pages/Account"
 import Signup from "./Pages/Sgnup"
-import Downmenu from "./Pages/Downmenu"
+import Pending from "./Pages/Pending"
+import Account from "./Pages/Account"
+
 
 function App() {
+
+
   
   return (
         <>
               <>
                   <BrowserRouter>
-                  <div>
-                      <Topnav/>
-                    </div>
-                    <div className="lg:flex  lg:gap-8 lg:px-40">
-                      <div className="">
-                        <Sidemenu/>
-                      </div>
-                      <div className="lg:hidden">
-                        <Downmenu/>
-                      </div>
-                      <div>
+                     <div>
                         <Routes>
                           <Route path="/" element={<Login/>}/>
                           <Route path="/login" element={<Login/>}/>
@@ -34,11 +24,12 @@ function App() {
                           <Route path="/homescreen" element={<Homescreen/>}/>
                           <Route path="/transaction" element={<Transaction/>}/>
                           <Route path="/trustfund" element={<Trustfund/>}/>
-                          <Route path="/getadvice" element={<Getadvice/>}/>
+                          <Route path="/pending" element={<Pending/>}/>
                           <Route path="/account" element={<Account/>}/>
+                         
                         </Routes>
                       </div>
-                    </div>        
+                     
                   </BrowserRouter>
               </>
 

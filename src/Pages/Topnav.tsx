@@ -1,7 +1,6 @@
 import logo from '../assets/Primarylogo.svg'
 import Alert from '../assets/Alert.svg'
 import Person from '../assets/Person.svg'
-import Logout from '../assets/Logout.svg'
 import { Button } from '@/components/ui/button'
 import { Link } from 'react-router-dom'
 import Signout from './Signout'
@@ -13,12 +12,12 @@ export default function Topnav() {
 
 
   return (
-    <div className='bg-white w-full shadow-sm fixed px-5 lg:px-40 items-center py-5 '>
+    <div className='w-full py-5 px-5'>
           <main>
             <nav className='flex items-center justify-between'>
               <Link  to="/homescreen"   >
               <div>
-                <img src={logo} alt="" className='lg:h-20 h-12 sm:hidden md-hidden lg:block' />
+                <img src={logo} alt="" className='lg:h-20 h-12  lg:block' />
               </div>              
               </Link>
               <ul className='flex gap-3'>

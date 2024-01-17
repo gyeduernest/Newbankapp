@@ -3,6 +3,9 @@ import { useState } from "react"
 import { auth } from "../firebaseConfig"
 import { signInWithEmailAndPassword } from 'firebase/auth';
 import { useNavigate } from "react-router-dom";
+import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
+import logo from "../assets/Primarylogo.svg"
+
 
 
 
@@ -12,7 +15,8 @@ export default function Login() {
   const navigate = useNavigate();
   const [errorState, setErrorState] = useState(null);
 
-  const loginAccount = async (e) => {
+
+  const handleLogin = async (e) => {
     e.preventDefault();
 
     try {
@@ -30,20 +34,33 @@ const userCredential = await signInWithEmailAndPassword(auth, email, password);
       }
     }
 
-    
+
   };
 
   return (
-    <div className="flex justify-center py-40">
+    <div className="lg:py-20 lg:px-[500px] py-10 px-6 ">
+              <div className="">
+              <img src={logo} alt=""  className="w-64"/>
+              </div>
               <form action="" className='w-72 lg:w-96 lg:py-8 py-5 lg:px-7 px-5 border-2 border-slate-200 rounded-md '>
                 <div className="font-bold text-2xl mb-5">
                     Login
                   </div>
-                  {errorState && (
-              <div className="text-red-600 text-end rounded-md px-3 border py-2 text-xs font-semibold bg-red-100 mb-5 ">
+                  
+            
+
+            <Alert>
+              <AlertDescription>
+              {errorState && (
+              <div className="text-red-600 text-end rounded-md px-3 border py-2 text-xs font-semibold bg-red-100">
                 {errorState}
               </div>
             )}
+              </AlertDescription>
+            </Alert>
+
+
+            
               <div className="sm:col-span-4">
               <label htmlFor="email" className="block text-sm font-medium leading-6 text-gray-900">
                 Email address
@@ -89,7 +106,7 @@ const userCredential = await signInWithEmailAndPassword(auth, email, password);
             </div>
 
             <div className="flex justify-center  ">
-              <Button onClick={loginAccount} className="bg-blue-700 w-full mt-8 hover:bg-blue-400 focus:ring-4 focus:bg-blue-800">
+              <Button onClick={handleLogin} className="bg-blue-700 w-full mt-8 hover:bg-blue-400 focus:ring-4 focus:bg-blue-800">
                 Go to Dashboard
               </Button>
             </div>

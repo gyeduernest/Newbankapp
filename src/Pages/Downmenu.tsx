@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom'
 
 export default function Downmenu() {
   return (
-    <div>
+    <div className='block lg:hidden '>
         <div className="p-5 fixed bottom-0 text-sm bg-slate-800 md:w-full text-white flex  shadow-xl w-full rounded-md ">
           <div className="flex gap-4  w-full justify-between ">
             <Link to="/homescreen"  >
