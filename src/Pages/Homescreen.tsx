@@ -42,10 +42,10 @@ export default function Homescreen() {
 
   <div className="lg:flex justify-center  py-40 ">
 
-  <div className="lg:fixed lg:left-20 ">
+  <div className="lg:fixed lg:left-5  ">
     <Sidemenu/>
   </div>
-    <div className="lg:flex  ">
+    <div className="lg:flex lg:ml-64  ">
        <div className="px-5">
           <div className='lg:flex gap-8 lg:flex-wrap h-40 md:flex justify-center'>
             <Card className="mb-5 w-full lg:w-48">

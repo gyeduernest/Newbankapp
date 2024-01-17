@@ -24,11 +24,11 @@ export default function Trustfund() {
   <Downmenu/>
 
   <div className="lg:flex justify-center">
-  <div className="lg:py-40 py-16 lg:fixed left-20">
+  <div className="lg:py-40 py-16 lg:fixed left-5">
     <Sidemenu2/>
   </div>
 
-    <div className="lg:py-28 md:py-24  px-5 mb-20">
+    <div className="lg:py-28 md:py-2 lg:ml-[300px] px-5 mb-20">
           
           <div className=" 
           bg-white lg:p-5 md:p-5 border rounded-md mb-10 md:mb-10 md:mt-5  lg:mt-5 lg:mb-10 " >

@@ -50,7 +50,7 @@ export default function Downmenu() {
                     </p>
               </div>
             </Link>
-            <Link  to="/account" >
+            <Link  to="/pending" >
               <div className=" justify-center items-center ">
                     <img src={Moneylight} alt="" className="ml-4" />
                     <p>

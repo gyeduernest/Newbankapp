@@ -3,6 +3,7 @@ import { useState } from "react"
 import { auth } from "../firebaseConfig"
 import { createUserWithEmailAndPassword } from 'firebase/auth';
 import { useNavigate } from "react-router-dom";
+import logo from '../assets/Primarylogo.svg'
 
 
 
@@ -31,7 +32,10 @@ const userCredential = await createUserWithEmailAndPassword(auth, email, passwor
   
   
   return (
-    <div className="flex justify-center py-40">
+    <div className=" justify-center lg:py-20 lg:px-[500px] py-10 px-6 lg:py-20">
+      <div className="">
+              <img src={logo} alt=""  className="w-64"/>
+              </div>
               <form action="" 
                   className='w-72 lg:w-96 lg:py-8 py-5 lg:px-7 px-5 border-2 border-slate-200 rounded-md '>
                   <div className="font-bold text-2xl mb-5">

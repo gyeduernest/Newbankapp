@@ -32,10 +32,10 @@ export default function Transaction() {
       <Downmenu/>
     
       <div className="lg:flex  justify-center">
-      <div className="lg:py-40  lg:fixed left-20">
+      <div className="lg:py-40  lg:fixed left-5">
         <Sidemenu3/>
       </div>
-      <div className="lg:px-40 py-32  lg:py-40 px-5 ">
+      <div className="lg:px-40 py-32 lg:ml-64 lg:py-40 px-5 ">
         <div className="    mb-10 text-2xl font-medium flex justify-between">
                     <AlertDialog>
               <AlertDialogTrigger><Button  className="bg-gray-500 flex gap-2"   > <img src={locklight} alt="" /> Receive Money</Button></AlertDialogTrigger>

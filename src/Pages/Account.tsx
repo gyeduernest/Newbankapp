@@ -25,10 +25,10 @@ export default function Account() {
             <Downmenu/>
 
   <div className="lg:flex justify-center">
-  <div className="lg:py-40 lg:fixed left-20 py-16 ">
+  <div className="lg:py-40 lg:fixed left-5 py-16 ">
     <Sidemenu4/>
   </div>
-    <div className="  lg:py-40 lg:px-16 lg:grid lg:grid-cols-2 lg:gap-8 lg:ml-40 px-16 md:px-72">
+    <div className="  lg:py-40 lg:px-16 lg:grid lg:grid-cols-2 lg:gap-8 lg:ml-64 px-16 md:px-72">
       <div>
           <div>
             Full name
@@ -135,7 +135,7 @@ export default function Account() {
             </AlertDialogContent>
           </AlertDialog>
       </div>
-      <div className=''>
+      <div className='mb-20'>
           <div>
                   Trust fund Contract holders
           </div>
@@ -155,6 +155,9 @@ export default function Account() {
               </AlertDialogFooter>
             </AlertDialogContent>
           </AlertDialog>
+      </div>
+      <div className='h-12'>
+
       </div>
     </div>
   </div>
