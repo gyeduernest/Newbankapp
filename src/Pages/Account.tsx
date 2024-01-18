@@ -34,18 +34,36 @@ export default function Account() {
             Full name
           </div>
               <AlertDialog>
-            <AlertDialogTrigger  className=' items-center px-16 rounded-md border text-slate-300 py-2 flex gap-2' >Gyedu Ernest <img src={lock} alt="" /> </AlertDialogTrigger>
+            <AlertDialogTrigger  className=' items-center px-16 rounded-md border text-slate-300 py-2 flex gap-2' >Mary Jones <img src={lock} alt="" /> </AlertDialogTrigger>
             <AlertDialogContent>
               <AlertDialogHeader>
-                <AlertDialogTitle>Are you absolutely sure?</AlertDialogTitle>
+                <AlertDialogTitle>Account locked?</AlertDialogTitle>
+                <AlertDialogDescription>
+                  You cannot change the name of your account
+                </AlertDialogDescription>
+              </AlertDialogHeader>
+              <AlertDialogFooter>
+                <AlertDialogCancel className='bg-red-600 text-white'>Close</AlertDialogCancel>
+              </AlertDialogFooter>
+            </AlertDialogContent>
+          </AlertDialog>
+      </div>
+      <div className=''>
+          <div>
+                  Email Address
+          </div>
+              <AlertDialog>
+            <AlertDialogTrigger  className=' items-center px-10  rounded-md border text-slate-300 py-2  flex gap-2  text-center' >Maryjones@gmail.com <img src={lock} alt="" /> </AlertDialogTrigger>
+            <AlertDialogContent>
+              <AlertDialogHeader>
+                <AlertDialogTitle>You cannot change your email</AlertDialogTitle>
                 <AlertDialogDescription>
                   This action cannot be undone. This will permanently delete your account
                   and remove your data from our servers.
                 </AlertDialogDescription>
               </AlertDialogHeader>
               <AlertDialogFooter>
-                <AlertDialogCancel>Cancel</AlertDialogCancel>
-                <AlertDialogAction>Continue</AlertDialogAction>
+              <AlertDialogCancel className='bg-red-600 text-white'>Close</AlertDialogCancel>
               </AlertDialogFooter>
             </AlertDialogContent>
           </AlertDialog>
@@ -59,15 +77,13 @@ export default function Account() {
             <AlertDialogTrigger  className='items-center px-16 rounded-md border text-slate-300 py-2 flex gap-2' >46545465585 <img src={lock} alt="" /> </AlertDialogTrigger>
             <AlertDialogContent>
               <AlertDialogHeader>
-                <AlertDialogTitle>Are you absolutely sure?</AlertDialogTitle>
+                <AlertDialogTitle>Your Account number</AlertDialogTitle>
                 <AlertDialogDescription>
-                  This action cannot be undone. This will permanently delete your account
-                  and remove your data from our servers.
+                  This contains your account number you cannot change it
                 </AlertDialogDescription>
               </AlertDialogHeader>
               <AlertDialogFooter>
-                <AlertDialogCancel>Cancel</AlertDialogCancel>
-                <AlertDialogAction>Continue</AlertDialogAction>
+              <AlertDialogCancel className='bg-red-600 text-white'>Close</AlertDialogCancel>
               </AlertDialogFooter>
             </AlertDialogContent>
           </AlertDialog>
@@ -80,31 +96,28 @@ export default function Account() {
             <AlertDialogTrigger  className=' items-center px-20 rounded-md border text-slate-300 py-2 flex gap-2' >Bancorp <img src={lock} alt="" /> </AlertDialogTrigger>
             <AlertDialogContent>
               <AlertDialogHeader>
-                <AlertDialogTitle>Are you absolutely sure?</AlertDialogTitle>
+                <AlertDialogTitle>Bank name?</AlertDialogTitle>
                 <AlertDialogDescription>
-                  This action cannot be undone. This will permanently delete your account
-                  and remove your data from our servers.
+                  This is the name of the bank that has your trust fund
                 </AlertDialogDescription>
               </AlertDialogHeader>
               <AlertDialogFooter>
-                <AlertDialogCancel>Cancel</AlertDialogCancel>
-                <AlertDialogAction>Continue</AlertDialogAction>
+              <AlertDialogCancel className='bg-red-600 text-white'>Close</AlertDialogCancel>                
               </AlertDialogFooter>
             </AlertDialogContent>
           </AlertDialog>
       </div>
       <div className=''>
           <div>
-                  Trust fund Contract holders
+                  Telephone number
           </div>
               <AlertDialog>
-            <AlertDialogTrigger  className=' items-center px-20  rounded-md border text-slate-300 py-2  flex gap-2  text-center' >Bancorp <img src={lock} alt="" /> </AlertDialogTrigger>
+            <AlertDialogTrigger  className=' items-center px-20  rounded-md border text-slate-300 py-2  flex gap-2  text-center' >+1........... <img src={lock} alt="" /> </AlertDialogTrigger>
             <AlertDialogContent>
               <AlertDialogHeader>
-                <AlertDialogTitle>Are you absolutely sure?</AlertDialogTitle>
+                <AlertDialogTitle>Your Phone number</AlertDialogTitle>
                 <AlertDialogDescription>
-                  This action cannot be undone. This will permanently delete your account
-                  and remove your data from our servers.
+                          You cannot change your phone number because it was used as a primary contact to create your account
                 </AlertDialogDescription>
               </AlertDialogHeader>
               <AlertDialogFooter>
@@ -114,33 +127,13 @@ export default function Account() {
             </AlertDialogContent>
           </AlertDialog>
       </div>
-      <div className=''>
-          <div>
-            Name of bank
-          </div>
-              <AlertDialog>
-            <AlertDialogTrigger  className=' items-center px-20 rounded-md border text-slate-300 py-2 flex gap-2' >Bancorp <img src={lock} alt="" /> </AlertDialogTrigger>
-            <AlertDialogContent>
-              <AlertDialogHeader>
-                <AlertDialogTitle>Are you absolutely sure?</AlertDialogTitle>
-                <AlertDialogDescription>
-                  This action cannot be undone. This will permanently delete your account
-                  and remove your data from our servers.
-                </AlertDialogDescription>
-              </AlertDialogHeader>
-              <AlertDialogFooter>
-                <AlertDialogCancel>Cancel</AlertDialogCancel>
-                <AlertDialogAction>Continue</AlertDialogAction>
-              </AlertDialogFooter>
-            </AlertDialogContent>
-          </AlertDialog>
-      </div>
-      <div className='mb-20'>
+     
+      <div className=' mb-20'>
           <div>
                   Trust fund Contract holders
           </div>
               <AlertDialog>
-            <AlertDialogTrigger  className=' items-center px-20  rounded-md border text-slate-300 py-2  flex gap-2  text-center' >Bancorp <img src={lock} alt="" /> </AlertDialogTrigger>
+            <AlertDialogTrigger  className=' items-center px-10  rounded-md border text-slate-300 py-2  flex gap-2  text-center' >Stevens and Leeto <img src={lock} alt="" /> </AlertDialogTrigger>
             <AlertDialogContent>
               <AlertDialogHeader>
                 <AlertDialogTitle>Are you absolutely sure?</AlertDialogTitle>
@@ -150,12 +143,12 @@ export default function Account() {
                 </AlertDialogDescription>
               </AlertDialogHeader>
               <AlertDialogFooter>
-                <AlertDialogCancel>Cancel</AlertDialogCancel>
-                <AlertDialogAction>Continue</AlertDialogAction>
+              <AlertDialogCancel className='bg-red-600 text-white'>Close</AlertDialogCancel>
               </AlertDialogFooter>
             </AlertDialogContent>
           </AlertDialog>
       </div>
+      
       <div className='h-12'>
 
       </div>

@@ -1,10 +1,19 @@
 import logo from '../assets/Primarylogo.svg'
-import Alert from '../assets/Alert.svg'
+import Notification from '../assets/Alert.svg'
 import Person from '../assets/Person.svg'
 import { Button } from '@/components/ui/button'
 import { Link } from 'react-router-dom'
 import Signout from './Signout'
-
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu"
+import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
+import close from '../assets/Close.svg'
 
 
 export default function Topnav() {
@@ -21,12 +30,34 @@ export default function Topnav() {
               </div>              
               </Link>
               <ul className='flex gap-3'>
-                <Button variant={"outline"}  className='flex' size={"icon"} >
-                  <img src={Alert} alt="" />
-               </Button>
+
+                              <DropdownMenu>
+                  <DropdownMenuTrigger><Button variant={"outline"}  className='flex' size={"icon"} >
+                  <img src={Notification} alt="" />
+               </Button></DropdownMenuTrigger>
+                  <DropdownMenuContent>
+                    <DropdownMenuItem className='flex justify-between font-bold'>My Notifications   <img src={close} alt="" /> </DropdownMenuItem>
+                    <DropdownMenuSeparator />
+                    <DropdownMenuItem>                   
+                    <Alert>
+                      <AlertTitle>Nothing to show</AlertTitle>
+                      <AlertDescription className='text-xs'>
+                        You have no notifications or alerts yet
+                      </AlertDescription>
+                  </Alert>
+
+                    </DropdownMenuItem>
+                  </DropdownMenuContent>
+                </DropdownMenu>
+
+
+                
+
+
+
                 <Button className='flex gap-2'  variant={"outline"} size={"icon"}>
                   <img src={Person} alt="" />
-                  <p className='text-xs hidden sm:hidden md:hidden lg:block'>Mayor one</p>
+                  <p className='text-xs hidden sm:hidden md:hidden lg:block'>Mary Jones</p>
                </Button>
                 <Signout/>
               </ul>

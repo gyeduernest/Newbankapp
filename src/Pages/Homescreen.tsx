@@ -48,23 +48,36 @@ export default function Homescreen() {
     <div className="lg:flex lg:ml-64  ">
        <div className="px-5">
           <div className='lg:flex gap-8 lg:flex-wrap h-40 md:flex justify-center'>
-            <Card className="mb-5 w-full lg:w-48">
+          <AlertDialog>
+              <AlertDialogTrigger className="mb-5 w-full lg:w-48 md:w-48 md:mr-8 ">
+                <Card className="mb-5 w-full lg:w-48 bg-red-50">
               <CardHeader>
-                <CardDescription className="text-slate-700 font-medium">Current Balance</CardDescription>
-                <CardTitle className="flex text-blue-700"><img src={Currency} alt="" />5,000,000</CardTitle>
+                <CardDescription className="text-slate-700 font-medium text-center md:text-left ">Current Balance</CardDescription>
+                <CardTitle className="flex text-red-700"><span className="w-6">$</span>597,483.89</CardTitle>
               </CardHeader>
               <CardContent className="flex gap-2">
                 <p className="text-red-400">Funds locked up</p>
                 <img src={Warn} alt="" />
               </CardContent>
-              
-            </Card>
-           
-           
+            </Card></AlertDialogTrigger>
+              <AlertDialogContent className="">
+                <AlertDialogHeader>
+                  <AlertDialogTitle>Funds are Locked</AlertDialogTitle>
+                  <AlertDialogDescription>
+                    The only way you can access these funds is to contact the lawfirm holding the contracts.
+                  </AlertDialogDescription>
+                </AlertDialogHeader>
+                <AlertDialogFooter>
+                  <AlertDialogCancel className="bg-red-600 text-white hover:bg-red-600 hover:text-white">Cancel</AlertDialogCancel>
+                  <a href=""   target="_blank"><AlertDialogAction className="bg-blue-700 hover:bg-blue-600">Start Process</AlertDialogAction></a>
+                </AlertDialogFooter>
+              </AlertDialogContent>
+            </AlertDialog>
+            
            <Card className="mb-5 w-full lg:w-48">
               <CardHeader>
                 <CardDescription className="text-slate-700 font-medium">Latest Transaction</CardDescription>
-                <CardTitle className="flex"><img src={Currency} alt="" />5</CardTitle>
+                <CardTitle className="flex"><span className="w-6">$</span>2k</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className=" flex gap-2">
@@ -98,10 +111,10 @@ export default function Homescreen() {
               <img src={Lock} alt="" className="lg:h-12 h-8" />
               <div>
               <p className=" text-xl font-Normal text-blue-500">
-              Trust fund baby?  
+              Trust fund locked up?  
               </p>
               <p className="text-xs lg:font-medium font-normal text-slate-400">
-                All funds are available but will need to be processed in order to ensure it can be released
+                All funds are available but will need to be processed in order to ensure its release
               </p>
               </div>
             </div>
@@ -117,7 +130,7 @@ export default function Homescreen() {
                 </AlertDialogHeader>
                 <AlertDialogFooter>
                   <AlertDialogCancel className="bg-red-600 text-white hover:bg-red-600 hover:text-white">Cancel</AlertDialogCancel>
-                  <AlertDialogAction className="bg-blue-700 hover:bg-blue-600">Start Process</AlertDialogAction>
+                  <a href=""   target="_blank"><AlertDialogAction className="bg-blue-700 hover:bg-blue-600">Start Process</AlertDialogAction></a>
                 </AlertDialogFooter>
               </AlertDialogContent>
             </AlertDialog>
@@ -131,7 +144,7 @@ export default function Homescreen() {
 
           <div>
             <h3 className="text-xl font-bold">
-              My assets under trust fund contract
+              Assets under Trust-fund
             </h3>
             <div className=" w-full  lg:flex gap-4">
               <div className="border  rounded-md lg:w-2/3 border-slate-200 ">
@@ -156,7 +169,7 @@ export default function Homescreen() {
                     <div className=" px-3 mb-5">
                     <div className="border border-slate-200 rounded-md shadow-sm flex justify-between  py-3 px-3 hover:bg-slate-50 ">
                           <img src={Lock} alt="" />
-                          <p className="text-xs">  Stocks and Bonds </p>
+                          <p className="text-xs">  Gold bars </p>
                           <p className="text-xs"> Unknown...</p>
                     </div>
                     </div>
@@ -174,7 +187,7 @@ export default function Homescreen() {
                 </AlertDialogHeader>
                 <AlertDialogFooter>
                   <AlertDialogCancel className="bg-red-600 text-white hover:bg-red-600 hover:text-white">Cancel</AlertDialogCancel>
-                  <AlertDialogAction className="bg-blue-700 hover:bg-blue-600">Start Process</AlertDialogAction>
+                  <a href=""><AlertDialogAction className="bg-blue-700 hover:bg-blue-600">Start Process</AlertDialogAction></a>
                 </AlertDialogFooter>
               </AlertDialogContent>
             </AlertDialog>
@@ -190,31 +203,31 @@ export default function Homescreen() {
                   <div className="px-2 flex mt-2 hover:bg-slate-50 py-2 justify-between rounded-md">
                       <img src={Avatar1} alt="" />
                       <div>
-                        <h3 className="text-sm"> Vharies wan</h3>
-                        <p className="text-xs text-slate-500 font-semibold">For food</p>
+                        <h3 className="text-sm">Groceries</h3>
+                        <p className="text-xs text-slate-500 font-semibold">Walmart</p>
                       </div>
                   <div>
-                    $15
+                    $1.5k
                   </div>
                   </div>
                   <div className="px-2 flex mt-2 hover:bg-slate-50 py-2 justify-between rounded-md">
                       <img src={Avatar1} alt="" />
                       <div>
-                        <h3 className="text-sm"> Vharies wan</h3>
-                        <p className="text-xs text-slate-500 font-semibold">For food</p>
+                        <h3 className="text-sm"> Bills</h3>
+                        <p className="text-xs text-slate-500 font-semibold">For Energy</p>
                       </div>
                   <div>
-                    $15
+                    $1.9k
                   </div>
                   </div>
                   <div className="px-2 flex mt-2 hover:bg-slate-50 py-2 justify-between rounded-md">
                       <img src={Avatar1} alt="" />
                       <div>
-                        <h3 className="text-sm"> Vharies wan</h3>
-                        <p className="text-xs text-slate-500 font-semibold">For food</p>
+                        <h3 className="text-sm"> Subscription</h3>
+                        <p className="text-xs text-slate-500 font-semibold">Netflix</p>
                       </div>
                   <div>
-                    $15
+                    $60
                   </div>
                   </div>
                     <Link  to="/transaction" >

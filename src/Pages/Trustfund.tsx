@@ -71,7 +71,7 @@ export default function Trustfund() {
           </div>
           <div>
             <h3 className="text-xl font-bold">
-              My assets under trust fund contract
+            Assets under Trust-fun
             </h3>
             <div className=" w-full  lg:flex gap-4">
               <div className="border  rounded-md lg:w-full border-slate-200 ">
@@ -96,7 +96,7 @@ export default function Trustfund() {
                     <div className=" px-3 mb-5">
                     <div className="border border-slate-200 rounded-md shadow-sm flex justify-between  py-3 px-3 hover:bg-slate-50 ">
                           <img src={Lock} alt="" />
-                          <p className="text-xs">  Stocks and Bonds </p>
+                          <p className="text-xs">  Gold Bars </p>
                           <p className="text-xs"> Unknown...</p>
                     </div>
                     </div>

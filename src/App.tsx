@@ -16,7 +16,7 @@ function App() {
         <>
               <>
                   <BrowserRouter>
-                     <div>
+                     <div className="font-sans">
                         <Routes>
                           <Route path="/" element={<Login/>}/>
                           <Route path="/login" element={<Login/>}/>

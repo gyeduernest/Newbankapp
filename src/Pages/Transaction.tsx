@@ -18,7 +18,7 @@ import Avatar1 from '../assets/Avatar1.png'
 import Deposit from '../assets/Deposit.svg'
 import leave from '../assets/leave.svg'
 import locklight from '../assets/Locklight.svg'
-
+import Check from '../assets/Check.svg'
 
 
 
@@ -39,185 +39,121 @@ export default function Transaction() {
         <div className="    mb-10 text-2xl font-medium flex justify-between">
                     <AlertDialog>
               <AlertDialogTrigger><Button  className="bg-gray-500 flex gap-2"   > <img src={locklight} alt="" /> Receive Money</Button></AlertDialogTrigger>
-              <AlertDialogContent className="bg-red-50 text-red-700">
+              <AlertDialogContent className="">
                 <AlertDialogHeader>
                   <AlertDialogTitle>Account has been locked</AlertDialogTitle>
-                  <AlertDialogDescription className="text-red-600">
-                    All your assets are locked you can begin the release of funds by clicking on continue
+                  <AlertDialogDescription className="">
+                    All your assets are locked you can begin the release of funds by clicking on start process
                   </AlertDialogDescription>
                 </AlertDialogHeader>
                 <AlertDialogFooter>
-                  <AlertDialogCancel>Cancel</AlertDialogCancel>
-                  <AlertDialogAction className="bg-blue-700">Continue</AlertDialogAction>
+                  <AlertDialogCancel className="bg-red-600 text-white">Cancel</AlertDialogCancel>
+                  <AlertDialogAction className="bg-blue-700">Start Process</AlertDialogAction>
                 </AlertDialogFooter>
               </AlertDialogContent>
             </AlertDialog>
                     <AlertDialog>
               <AlertDialogTrigger><Button  className="bg-gray-500 flex gap-2"><img src={locklight} alt="" />Send Money</Button></AlertDialogTrigger>
-              <AlertDialogContent className="bg-red-50 text-red-700">
+              <AlertDialogContent className="">
                 <AlertDialogHeader>
                   <AlertDialogTitle>Account has been locked</AlertDialogTitle>
-                  <AlertDialogDescription className="text-red-600">
-                    All your assets are locked you can begin the release of funds by clicking on continue
+                  <AlertDialogDescription className="">
+                  All your assets are locked you can begin the release of funds by clicking on start process
                   </AlertDialogDescription>
                 </AlertDialogHeader>
                 <AlertDialogFooter>
-                  <AlertDialogCancel>Cancel</AlertDialogCancel>
-                  <AlertDialogAction className="bg-blue-700">Continue</AlertDialogAction>
+                  <AlertDialogCancel className="bg-red-600 text-white">Cancel</AlertDialogCancel>
+                  <AlertDialogAction className="bg-blue-700">Start Process</AlertDialogAction>
                 </AlertDialogFooter>
               </AlertDialogContent>
             </AlertDialog>
 
           
         </div>
-            <div className="flex lg:gap-16 justify-between bg-green-50 border-b-2 py-5 b w-full px-2  items-center  hover:bg-slate-50">
+            
+            <div className="lg:gap-16 justify-between flex bg-slate-50 border-b-2 py-5 b w-full px-2  items-center mb-3 hover:bg-slate-100">
             <div>
-              <img src={Avatar1} alt="" />
+              <img src={Check} alt="" />
             </div>
-            <div>
-              <p> Name</p>
-            </div>
-            <div>
-              Description
-            </div>
-            <div>
-              <p> 15$</p>
-            </div>
-            <div>
-            <img src={Deposit} alt="" />
+            <div className="w-32 lg:w-40">
+              <p>Salary</p>
+            <div className="text-xs text-slate-500">
+              Monthly salary with allowance and Benefits
             </div>
             </div>
-            <div className="lg:gap-16 justify-between flex bg-green-50 border-b-2 py-5 b w-full px-2  items-center  hover:bg-slate-50">
             <div>
-              <img src={Avatar1} alt="" />
-            </div>
-            <div>
-              <p> Name</p>
-            </div>
-            <div>
-              Description
-            </div>
-            <div>
-              <p> 15$</p>
+              <p> 15k$</p>
             </div>
             <div>
             <img src={Deposit} alt="" />
             </div>
             </div>
-            <div className="lg:gap-16 justify-between flex bg-green-50 border-b-2 py-5 b w-full px-2  items-center  hover:bg-slate-50">
+            <div className="lg:gap-16 justify-between flex bg-slate-50 border-b-2 py-5 b w-full px-2  items-center mb-3 hover:bg-slate-100">
             <div>
-              <img src={Avatar1} alt="" />
+              <img src={Check} alt="" />
             </div>
-            <div>
-              <p> Name</p>
-            </div>
-            <div>
-              Description
-            </div>
-            <div>
-              <p> 15$</p>
-            </div>
-            <div>
-            <img src={Deposit} alt="" />
+            <div className="w-32 lg:w-40">
+              <p>Rent</p>
+            <div className="text-xs text-slate-500">
+              Money for the rent of appartment
             </div>
             </div>
-            <div className="lg:gap-16 justify-between flex bg-red-50 border-b-2 py-5 b w-full px-2  items-center  hover:bg-slate-50">
             <div>
-              <img src={Avatar1} alt="" />
+              <p> -2k$</p>
             </div>
             <div>
-              <p> Name</p>
+            <div>
+            <img src={leave} alt="" />
+            </div>
+            </div>
+            
+            </div>
+            <div className="lg:gap-16 justify-between flex bg-slate-50 border-b-2 py-5 b w-full px-2  items-center mb-3 hover:bg-slate-100">
+            <div>
+              <img src={Check} alt="" />
+            </div>
+            <div className="w-32 lg:w-40">
+              <p>Subscription</p>
+            <div className="text-xs text-slate-500">
+              Payment of Netflix sub
+            </div>
             </div>
             <div>
-              Description
-            </div>
-            <div>
-              <p> 15$</p>
+              <p> -60$</p>
             </div>
             <div>
             <img src={leave} alt="" />
             </div>
             </div>
-            <div className="lg:gap-16 justify-between flex bg-green-50 border-b-2 py-5 b w-full px-2  items-center  hover:bg-slate-50">
+            <div className="lg:gap-16 justify-between flex bg-slate-50 border-b-2 py-5 b w-full px-2  items-center mb-3 hover:bg-slate-100">
             <div>
-              <img src={Avatar1} alt="" />
+              <img src={Check} alt="" />
             </div>
-            <div>
-              <p> Name</p>
+            <div className="w-32 lg:w-40">
+              <p>Refund</p>
+            <div className="text-xs text-slate-500">
+              Payment for Request for Refund on service
             </div>
-            <div>
-              Description
-            </div>
-            <div>
-              <p> 15$</p>
             </div>
             <div>
-            <img src={Deposit} alt="" />
-            </div>
-            </div>
-            <div className="lg:gap-16 justify-between bg-red-50 flex border-b-2 py-5 b w-full px-2  items-center  hover:bg-slate-50 ">
-            <div>
-              <img src={Avatar1} alt="" />
-            </div>
-            <div>
-              <p> Name</p>
-            </div>
-            <div>
-              Description
-            </div>
-            <div>
-              <p> 15$</p>
-            </div>
-            <div>
-            <img src={leave} alt="" />
-            </div>
-            </div>
-            <div className="lg:gap-16 justify-between flex bg-green-50 border-b-2 py-5 b w-full px-2  items-center  hover:bg-slate-50">
-            <div>
-              <img src={Avatar1} alt="" />
-            </div>
-            <div>
-              <p> Name</p>
-            </div>
-            <div>
-              Description
-            </div>
-            <div>
-              <p> 15$</p>
+              <p> 1k$</p>
             </div>
             <div>
             <img src={Deposit} alt="" />
             </div>
             </div>
-            <div className="lg:gap-16 justify-between bg-red-50 flex border-b-2 py-5 b w-full px-2  items-center hover:bg-slate-50 ">
+            <div className="lg:gap-16 justify-between flex bg-slate-50 border-b-2 py-5 b w-full px-2  items-center mb-3 hover:bg-slate-100">
             <div>
-              <img src={Avatar1} alt="" />
+              <img src={Check} alt="" />
             </div>
-            <div>
-              <p> Name</p>
-            </div>
-            <div>
-              Description
-            </div>
-            <div>
-              <p> 15$</p>
-            </div>
-            <div>
-            <img src={leave} alt="" />
+            <div className="w-32 lg:w-40">
+              <p>Utilities</p>
+            <div className="text-xs text-slate-500">
+              Payment of Energy, Water etc
             </div>
             </div>
-            <div className="bg-red-50 flex border-b-2 py-5 b w-full px-2  items-center lg:gap-16 justify-between hover:bg-slate-50 ">
             <div>
-              <img src={Avatar1} alt="" />
-            </div>
-            <div>
-              <p> Name</p>
-            </div>
-            <div>
-              Description
-            </div>
-            <div>
-              <p> 15$</p>
+              <p> -2k$</p>
             </div>
             <div>
             <img src={leave} alt="" />
