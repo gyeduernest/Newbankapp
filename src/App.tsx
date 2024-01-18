@@ -6,7 +6,7 @@ import Trustfund from "./Pages/Trustfund"
 import Signup from "./Pages/Sgnup"
 import Pending from "./Pages/Pending"
 import Account from "./Pages/Account"
-
+import Landingpage from "./Pages/Landingpage"
 
 function App() {
 
@@ -18,7 +18,7 @@ function App() {
                   <BrowserRouter>
                      <div className="font-sans">
                         <Routes>
-                          <Route path="/" element={<Login/>}/>
+                          <Route path="/" element={<Landingpage/>}/>
                           <Route path="/login" element={<Login/>}/>
                           <Route path="/signup" element={<Signup/>}/>
                           <Route path="/homescreen" element={<Homescreen/>}/>
